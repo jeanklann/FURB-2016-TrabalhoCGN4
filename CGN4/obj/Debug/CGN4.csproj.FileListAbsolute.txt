@@ -1,0 +1,7 @@
+c:\users\jean.klann.sistemafiesc\documents\visual studio 2015\Projects\CGN4\CGN4\bin\Debug\CGN4.exe.config
+c:\users\jean.klann.sistemafiesc\documents\visual studio 2015\Projects\CGN4\CGN4\bin\Debug\CGN4.exe
+c:\users\jean.klann.sistemafiesc\documents\visual studio 2015\Projects\CGN4\CGN4\bin\Debug\CGN4.pdb
+c:\users\jean.klann.sistemafiesc\documents\visual studio 2015\Projects\CGN4\CGN4\bin\Debug\OpenTK.dll
+c:\users\jean.klann.sistemafiesc\documents\visual studio 2015\Projects\CGN4\CGN4\obj\Debug\CGN4.csprojResolveAssemblyReference.cache
+c:\users\jean.klann.sistemafiesc\documents\visual studio 2015\Projects\CGN4\CGN4\obj\Debug\CGN4.exe
+c:\users\jean.klann.sistemafiesc\documents\visual studio 2015\Projects\CGN4\CGN4\obj\Debug\CGN4.pdb
