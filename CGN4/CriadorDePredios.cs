@@ -1,6 +1,8 @@
-﻿using OpenTK;
+﻿using ObjLoader.Loader.Loaders;
+using OpenTK;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,13 +13,14 @@ namespace CGN4 {
         public List<Predio> predios = new List<Predio>();
         int quant = 15;
         int offset = 3;
-        Random random = new Random();
+        public static Random random = new Random();
         public CriadorDePredios(Nave nave) {
             this.nave = nave;
             for(int i = 0; i < quant; i++) {
                 Predio predio = new Predio();
                 RandomPredio(predio);
                 predio.Position.Z = - i * offset;
+                predio.Position.Y = -2.5;
                 predios.Add(predio);
             }
         }
