@@ -10,6 +10,7 @@ namespace CGN4
 {
     public class GUI
     {
+        
         private readonly Font TextFont = new Font(FontFamily.GenericSansSerif, 20);
         private readonly Dictionary<string, GUIText> texts;
         private readonly List<GUIShape> shapes;
@@ -93,6 +94,7 @@ namespace CGN4
             //Faz update nas texturas de texto
             if (texts.Count > 0)
             {
+                
                 using (Graphics gfx = Graphics.FromImage(TextBitmap))
                 {
                     gfx.Clear(Color.Black);
@@ -108,7 +110,7 @@ namespace CGN4
                 }
 
                 BitmapData data = TextBitmap.LockBits(new Rectangle(0, 0, TextBitmap.Width, TextBitmap.Height),
-                ImageLockMode.ReadOnly, System.Drawing.Imaging.PixelFormat.Format32bppArgb);
+                    ImageLockMode.ReadOnly, System.Drawing.Imaging.PixelFormat.Format32bppArgb);
                 GL.TexSubImage2D(TextureTarget.Texture2D, 0, 0, 0, TextBitmap.Width, TextBitmap.Height, OpenTK.Graphics.OpenGL.PixelFormat.Bgra, PixelType.UnsignedByte, data.Scan0);
                 TextBitmap.UnlockBits(data);
             }

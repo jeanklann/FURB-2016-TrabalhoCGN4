@@ -5,6 +5,7 @@ using System.Drawing;
 using System;
 using ObjLoader.Loader.Loaders;
 using System.IO;
+using System.Threading;
 
 namespace CGN4
 {
@@ -138,6 +139,7 @@ namespace CGN4
 
         protected override void OnUpdateFrame(FrameEventArgs e)
         {
+            
             GUI.Update(gameState);
             GUI.UpdateText("ScoreR", "Score: " + score);
             GUI.UpdateText("ScoreP", "Score: " + score);
@@ -148,8 +150,6 @@ namespace CGN4
                 nave.Update();
             }
         }
-
-        private bool isRunning = true;
         protected override void OnRenderFrame(FrameEventArgs e)
         {
             GL.Clear(ClearBufferMask.ColorBufferBit | ClearBufferMask.DepthBufferBit);
