@@ -50,7 +50,7 @@ namespace CGN4 {
             Vector3d LastPos = Position;
             foreach(var item in Game.MainGame.predios.predios) {
                 if(BBox.DetectCollision(Position, item.BBox)){
-                    Game.MainGame.gameState = GameState.Defeat;
+                    //Game.MainGame.gameState = GameState.Defeat;
                 }
             }
 
