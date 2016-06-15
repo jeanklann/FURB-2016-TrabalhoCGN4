@@ -20,10 +20,10 @@ namespace CGN4
 
         public GameState gameState = GameState.Stopped;
 
-        float[] mat_specular = { 1.0f, 1.0f, 1.0f, 1.0f };
-        float[] mat_shininess = { 50.0f };
-        float[] light_position = { 1.0f, 1.0f, 1.0f, 0.0f };
-        float[] light_ambient = { 0.5f, 0.5f, 0.5f, 1.0f };
+        float[] MaterialSpecular = { 1.0f, 1.0f, 1.0f, 1.0f };
+        float[] MaterialShiness = { 50.0f };
+        float[] LightPosition = { 1.0f, 1.0f, 1.0f, 0.0f };
+        float[] LightAmbient = { 0.5f, 0.5f, 0.5f, 1.0f };
 
         protected override void OnLoad(EventArgs e)
         {
@@ -34,11 +34,11 @@ namespace CGN4
             GL.Enable(EnableCap.Lighting);
             GL.Enable(EnableCap.Light0);
             GL.Enable(EnableCap.ColorMaterial);
-            GL.Material(MaterialFace.Front, MaterialParameter.Specular, mat_specular);
-            GL.Material(MaterialFace.Front, MaterialParameter.Shininess, mat_shininess);
-            GL.Light(LightName.Light0, LightParameter.Position, light_position);
-            GL.Light(LightName.Light0, LightParameter.Ambient, light_ambient);
-            GL.Light(LightName.Light0, LightParameter.Diffuse, mat_specular);
+            GL.Material(MaterialFace.Front, MaterialParameter.Specular, MaterialSpecular);
+            GL.Material(MaterialFace.Front, MaterialParameter.Shininess, MaterialShiness);
+            GL.Light(LightName.Light0, LightParameter.Position, LightPosition);
+            GL.Light(LightName.Light0, LightParameter.Ambient, LightAmbient);
+            GL.Light(LightName.Light0, LightParameter.Diffuse, MaterialSpecular);
             //GL.Enable(EnableCap.CullFace);
             GL.EnableClientState(ArrayCap.VertexArray);
             GL.EnableClientState(ArrayCap.ColorArray);

@@ -12,14 +12,14 @@ namespace CGN4 {
         public Nave nave;
         public List<Predio> predios = new List<Predio>();
         int quant = 15;
-        int offset = 3;
+        double offset = 6;
         public static Random random = new Random();
         public CriadorDePredios(Nave nave) {
             this.nave = nave;
             for(int i = 0; i < quant; i++) {
                 Predio predio = new Predio();
                 RandomPredio(predio);
-                predio.Position.Z = - i * offset;
+                predio.Position.Z = - i * offset -10;
                 predio.Position.Y = -2.5;
                 predios.Add(predio);
             }
