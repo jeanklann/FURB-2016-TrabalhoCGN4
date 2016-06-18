@@ -127,9 +127,7 @@ namespace CGN4
             GL.PushMatrix();
             GL.Disable(EnableCap.DepthTest);
             GL.LoadIdentity();
-            GL.Viewport(new Rectangle(clientRectangle.Left, clientRectangle.Top, clientRectangle.Width, clientRectangle.Height));
             Matrix4 ortho_projection = Matrix4.CreateOrthographicOffCenter(0, clientSize.Width, clientSize.Height, 0, -35, 1);
-            GL.MatrixMode(MatrixMode.Projection);
 
             GL.PushMatrix();
             GL.LoadMatrix(ref ortho_projection);

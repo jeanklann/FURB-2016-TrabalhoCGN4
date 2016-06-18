@@ -129,7 +129,6 @@ namespace CGN4
         protected override void OnResize(EventArgs e)
         {
             GL.Viewport(new Rectangle(ClientRectangle.Left, ClientRectangle.Top, ClientRectangle.Width, ClientRectangle.Height));
-
             ProjectionMatrix = Matrix4d.Perspective(30, ClientSize.Width / ClientSize.Height, 1, 100);
             GL.MatrixMode(MatrixMode.Projection);
             GL.LoadMatrix(ref ProjectionMatrix);
@@ -191,6 +190,9 @@ namespace CGN4
                     case Key.P:
                         PauseGame();
                         break;
+					case Key.S:
+						score += 100;
+						break;
                 }
             };
         }
